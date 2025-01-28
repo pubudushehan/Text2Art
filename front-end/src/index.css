@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #0a0a0f;
+  background-image: radial-gradient(
+      circle at top right,
+      rgba(121, 68, 154, 0.13),
+      transparent
+    ),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Enhance card styling */
+.card {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(128, 0, 255, 0.1),
+    0 0 40px rgba(128, 0, 255, 0.1);
+}
+
+@media screen and (min-width: 480px) {
+  .card:nth-child(7n + 1) {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+  }
+}
+
+.prompt::-webkit-scrollbar {
+  width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
+
+/* Add animation classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 
+  bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 
+  hover:to-purple-700 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg font-medium transition-all duration-200
+  bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600
+  hover:to-teal-700 focus:ring-2 focus:ring-teal-500 focus:ring-offset-2;
+}
+
+/* Add these styles to your existing index.css */
+
+/* Ensure header is always clickable */
+header {
+  position: fixed;
+  z-index: 9999;
+}
+
+/* Adjust background elements z-index */
+.background-elements {
+  z-index: -1;
+}
+
+/* Update button hover states */
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure main content doesn't overlap header */
+main {
+  position: relative;
+  z-index: 1;
+  padding-top: 73px; /* Height of header */
+}
+
+/* Update existing background class */
+.background-gradient {
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Enhanced form field styles */
+input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  backdrop-filter: blur(10px);
+}
+
+input:focus {
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Add floating animation for cards */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.card {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Add these new utility classes */
+.text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg bg-white/5 rounded-2xl border border-white/10;
+}
+
+/* Add these new styles */
+
+/* Enhanced form styling */
+.form-container {
+  @apply backdrop-blur-lg bg-white/5 rounded-2xl border border-white/10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Input field enhancements */
+.input-field {
+  @apply bg-black/20 border border-white/10 rounded-lg px-4 py-3 
+  focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500/50 
+  transition-all duration-200;
+}
+
+/* Button loading state */
+button:disabled {
+  @apply opacity-70 cursor-not-allowed;
+}
+
+/* Enhanced glass card effect */
+.glass-card {
+  @apply backdrop-blur-lg bg-black/30 border border-white/10 
+  rounded-xl shadow-xl hover:shadow-purple-500/10 
+  transition-all duration-300;
+}
+
+/* Loader animation enhancement */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loader {
+  @apply animate-pulse;
+}
+
+/* Form field animation */
+.form-field {
+  @apply transform transition-all duration-200;
+}
+
+.form-field:focus-within {
+  @apply scale-[1.02];
+}
+
+/* Add these new modern styles */
+
+.modern-glass-card {
+  @apply backdrop-blur-lg bg-black/30 border border-white/10 
+    rounded-xl shadow-xl transition-all duration-300;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.modern-preview-card {
+  backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.modern-preview-card:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.modern-input {
+  @apply bg-black/20 border border-white/10 rounded-xl px-5 py-4 
+    focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500/50 
+    transition-all duration-300;
+}
+
+.modern-input:hover {
+  @apply border-purple-500/30;
+}
+
+.modern-button-primary {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300
+    bg-gradient-to-r from-purple-500 to-pink-500 
+    text-white shadow-lg;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-button-primary:hover {
+  @apply from-purple-600 to-pink-600;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.5);
+}
+
+.modern-button-primary:active {
+  transform: translateY(0);
+}
+
+.modern-button-secondary {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300
+    bg-gradient-to-r from-emerald-500 to-teal-500
+    text-white shadow-lg;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-button-secondary:hover {
+  @apply from-emerald-600 to-teal-600;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(16, 185, 129, 0.5);
+}
+
+.modern-button-secondary:active {
+  transform: translateY(0);
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+/* Add shimmer effect for loading states */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
