@@ -130,7 +130,7 @@ const CreatePost = () => {
                 <button
                   type="button"
                   onClick={handleSurpriseMe}
-                  className="modern-auto-button absolute right-2 top-1/2 -translate-y-1/2"
+                  className="modern-auto-button absolute right-2 top-2/4 -translate-y-1/2"
                 >
                   Auto
                 </button>

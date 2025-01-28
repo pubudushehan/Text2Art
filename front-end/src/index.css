@@ -316,12 +316,15 @@ button:disabled {
 
 /* Add these new styles */
 .modern-auto-button {
-  @apply px-4 py-1.5 rounded-lg font-medium text-sm
+  @apply px-4 py-3 rounded-lg font-medium text-sm
     bg-gradient-to-r from-purple-500/80 to-pink-500/80 
     hover:from-purple-500 hover:to-pink-500
     text-white transition-all duration-200
     backdrop-blur-sm shadow-lg
-    border border-white/10;
+    border border-white/10
+    transform hover:-translate-y-0.5
+    flex items-center justify-center
+    h-[30px]; /* Fixed height to ensure vertical centering */
 }
 
 /* Add label styles */
