@@ -102,27 +102,40 @@ const CreatePost = () => {
         <div className="relative z-10 space-y-8">
           {/* Creator Details */}
           <div className="space-y-6">
-            <FormField
-              labelName="Creator Name"
-              type="text"
-              name="name"
-              placeholder="Enter your artist name..."
-              value={form.name}
-              handleChange={handleChange}
-              className="modern-input"
-            />
+            {/* Name Input with Label */}
+            <div className="relative">
+              <label className="text-gray-200 text-sm mb-2 block">Name</label>
+              <FormField
+                type="text"
+                name="name"
+                placeholder="Enter your artist name..."
+                value={form.name}
+                handleChange={handleChange}
+                className="modern-input w-full"
+              />
+            </div>
 
-            <FormField
-              labelName="Your Vision"
-              type="text"
-              name="prompt"
-              placeholder="A surreal digital artwork of a floating city in the clouds..."
-              value={form.prompt}
-              handleChange={handleChange}
-              isSurpriseMe
-              handleSurpriseMe={handleSurpriseMe}
-              className="modern-input"
-            />
+            {/* Prompt Input with Label and Auto Button */}
+            <div className="relative">
+              <label className="text-gray-200 text-sm mb-2 block">Prompt</label>
+              <div className="relative">
+                <FormField
+                  type="text"
+                  name="prompt"
+                  placeholder="A surreal digital artwork of a floating city in the clouds..."
+                  value={form.prompt}
+                  handleChange={handleChange}
+                  className="modern-input w-full pr-24"
+                />
+                <button
+                  type="button"
+                  onClick={handleSurpriseMe}
+                  className="modern-auto-button absolute right-2 top-1/2 -translate-y-1/2"
+                >
+                  Auto
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Image Preview */}
