@@ -230,11 +230,21 @@ button:disabled {
 .modern-input {
   @apply bg-black/20 border border-white/10 rounded-xl px-5 py-4 
     focus:ring-2 focus:ring-purple-500/30 focus:border-purple-500/50 
-    transition-all duration-300;
+    transition-all duration-300 w-full;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
 }
 
 .modern-input:hover {
   @apply border-purple-500/30;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.03)
+  );
 }
 
 .modern-button-primary {
@@ -302,4 +312,41 @@ button:disabled {
   100% {
     background-position: 200% 0;
   }
+}
+
+/* Add these new styles */
+.modern-auto-button {
+  @apply px-4 py-1.5 rounded-lg font-medium text-sm
+    bg-gradient-to-r from-purple-500/80 to-pink-500/80 
+    hover:from-purple-500 hover:to-pink-500
+    text-white transition-all duration-200
+    backdrop-blur-sm shadow-lg
+    border border-white/10;
+}
+
+/* Add label styles */
+.form-label {
+  @apply text-gray-200 text-sm mb-2 block font-medium;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add background pattern */
+.modern-glass-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  pointer-events: none;
 }
