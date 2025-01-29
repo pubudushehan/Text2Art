@@ -58,10 +58,10 @@
    ```
    MONGODB_URL=your_mongodb_url
    StabilityAI_API_KEY=your_openai_api_key
-```
-  CLOUDINARY_CLOUD_NAME=your_cloud_name
-  CLOUDINARY_API_KEY=your_cloudinary_Api_Key
-  CLOUDINARY_API_SECRET=your_Cloudinary_Api_Secret
+  ```
+   CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_API_KEY=your_cloudinary_Api_Key
+   CLOUDINARY_API_SECRET=your_Cloudinary_Api_Secret
    ```
 
 4. **Start Servers**
