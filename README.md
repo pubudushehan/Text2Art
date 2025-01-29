@@ -31,7 +31,7 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository-url>
+   git clone (https://github.com/pubudushehan/Text2Art)
    cd text2art
    ```
 
