@@ -1,67 +1,115 @@
-# AI Image Generator 🎨
+# ✨ Text2Art - AI Image Generation Platform
 
-🌟 **AI Image Generator** is a web application powered by OpenAI's DALL-E model, designed to generate stunning images from text prompts.
+<div align="center">
+  <h1>🎨 Transform Your Imagination into Art</h1>
+  <p>Modern AI-powered platform to create stunning artwork from text.</p>
+</div>
 
-## Features ✨
+## 🌟 Overview
 
-- **Generate Images**: 🖼️ Input your text prompt and get a unique AI-generated image.
-  
-- **Community Sharing**: 🌐 Share your generated images and explore what others have created.
-  
-- **Search Functionality**: 🔍 Easily find images by searching through prompts or tags.
+**Text2Art** is an innovative web application that brings your ideas to life as artwork, powered by Stability AI. Featuring a sleek glass-morphic UI, it offers real-time image generation, a community gallery, and seamless user experience across all devices.
 
-## Technologies Used 🚀
+## ✨ Features
 
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **AI Model**: OpenAI's DALL-E
+- **🎨 AI Image Generation**: Create breathtaking artwork from your text descriptions using Stability AI.
+- **💡 Smart Prompt Suggestions**: Spark creativity with auto-generated prompts.
+- **🌐 Community Gallery**: Browse, share, and be inspired by artwork created by the community.
+- **🔍 Real-time Search**: Find artwork by prompts or creator names with ease.
+- **🌈 Modern UI**: Enjoy a glass-morphic design with smooth animations and gradients.
+- **📱 Responsive Design**: Access Text2Art effortlessly from any device.
+- **☁️ Cloud Storage**: Safely store your creations using Cloudinary.
 
-## Installation 🛠️
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js installed on your machine
-- MongoDB database
+- Install **Node.js** (v14 or higher)
+- Create accounts for **MongoDB**, **Stability AI API**, and **Cloudinary**
 
-### Getting Started 🚀
+### Steps to Run
 
-1. **Clone the repository**:
+1. **Clone the Repository**
+
    ```bash
-   git clone https://github.com/avishkaJSPshehan/AI-Image-Generator.git
+   git clone <repository-url>
+   cd text2art
    ```
 
-2. **Install dependencies**:
+2. **Install Dependencies**
+
+   **Frontend**
+
    ```bash
-   cd AI-Image-Generator
+   cd front-end
    npm install
    ```
 
-3. **Set up environment variables**:
-   - Rename `.env.example` to `.env` and add your configurations.
+   **Backend**
 
-4. **Start the server**:
    ```bash
+   cd ../back-end
+   npm install
+   ```
+
+3. **Set Environment Variables**
+
+   Create a `.env` file in the `back-end` directory:
+
+   ```
+   MONGODB_URL=your_mongodb_url
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+4. **Start Servers**
+
+   **Backend Server**
+
+   ```bash
+   cd back-end
    npm start
    ```
 
-5. **Start the client**:
+   **Frontend Development Server**
+
    ```bash
-   cd client
-   npm start
+   cd front-end
+   npm run dev
    ```
 
-6. **Visit** `http://localhost:3000` **to use the application**.
+5. **Launch the App**
+   Open `http://localhost:3000` in your browser.
 
-## Contributing 🌟
+## 🎨 Usage
 
-Contributions are welcome! Please follow these guidelines:
+### Creating Artwork
 
-- Fork the repository and create your branch (`git checkout -b feature/your-feature`).
-- Commit your changes (`git commit -am 'Add some feature'`).
-- Push to the branch (`git push origin feature/your-feature`).
-- Create a new Pull Request.
+1. Go to the Create page.
+2. Enter your name or artist alias.
+3. Write a descriptive prompt or let the Auto Prompt feature inspire you.
+4. Click Generate Artwork to create your masterpiece.
+5. Share your creation with the community.
 
-## License 📝
+### Exploring the Gallery
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+- Browse through the community's stunning AI-generated artworks.
+- Use the Search bar to find specific pieces or artists.
+- View details about the artwork, including the prompt and creator information.
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React.js with Vite for blazing-fast performance.
+- Tailwind CSS for responsive and stylish designs.
+- React Router for smooth navigation.
+
+### Backend
+
+- Node.js & Express for robust server-side functionality.
+- MongoDB for scalable and reliable data storage.
+- Stability AI API for cutting-edge AI integration.
+- Cloudinary for secure and efficient image storage.
+
+## 📝 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

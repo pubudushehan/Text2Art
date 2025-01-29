@@ -8,9 +8,9 @@ const App = () => {
       <header className="w-full flex justify-between items-center px-4 sm:px-8 py-4 backdrop-blur-lg bg-black/30 border-b border-white/10 fixed top-0 left-0 right-0 z-50">
         <Link
           to="/"
-          className="flex items-center gap-2 relative hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2 relative group hover:opacity-90 transition-all duration-300"
         >
-          <span className="font-bold text-xl bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+          <span className="font-extrabold text-2xl sm:text-3xl tracking-tight brand-text-gradient">
             Text2Art
           </span>
         </Link>
